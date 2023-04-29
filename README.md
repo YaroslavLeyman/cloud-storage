@@ -9,7 +9,7 @@
 - Навигация: Файлы, Фотографии, Корзина
 - Создание своих декораторов в NestJS
 - Документация серверной части с помощью Swagger
-- Работа с базой данных PostgreSQL + TypeORM
+- База данных PostgreSQL + TypeORM
 
 
 ### Технологии
@@ -25,7 +25,7 @@ Frontend:
 Backend:
 - NestJS
 - TypeScript
-- TypeORM + PostgreSQ L
+- TypeORM + PostgreSQL
 - Swagger
 - Multer
 - PassportJS + JWTe
