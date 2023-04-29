@@ -41,7 +41,7 @@ export class FilesService {
 
     const qb = this.repository.createQueryBuilder('file');
 
-    qb.where('id IN (: ...ids) AND userId = :userId', {
+    qb.where('id IN (:...ids) AND userId = :userId', {
       ids: idsArray,
       userId,
     });
