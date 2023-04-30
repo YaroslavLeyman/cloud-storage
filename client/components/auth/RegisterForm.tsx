@@ -48,7 +48,7 @@ export const RegisterForm: React.FC = () => {
           rules={[
             {
               required: true,
-              message: "Укажите почту",
+              message: "Please enter an email address",
             },
           ]}
         >
@@ -56,12 +56,12 @@ export const RegisterForm: React.FC = () => {
         </Form.Item>
 
         <Form.Item
-          label="Полное имя"
+          label="Full Name"
           name="fullName"
           rules={[
             {
               required: true,
-              message: "Укажите полное имя",
+              message: "Please enter a full name",
             },
           ]}
         >
@@ -69,12 +69,12 @@ export const RegisterForm: React.FC = () => {
         </Form.Item>
 
         <Form.Item
-          label="Пароль"
+          label="Password"
           name="password"
           rules={[
             {
               required: true,
-              message: "Укажите пароль",
+              message: "Please enter a password",
             },
           ]}
         >
@@ -88,7 +88,7 @@ export const RegisterForm: React.FC = () => {
           }}
         >
           <Button type="primary" htmlType="submit">
-            Регистрация
+            Sign up
           </Button>
         </Form.Item>
       </Form>

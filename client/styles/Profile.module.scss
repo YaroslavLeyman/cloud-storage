@@ -1,3 +1,47 @@
+.container {
+  width: 100%;
+}
+
 .root {
   margin: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (max-width:560px) {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userInfo {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f0f2f5;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.userInfo p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.userInfo p:last-child {
+  margin-bottom: 0;
 }

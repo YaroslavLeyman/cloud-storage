@@ -12,8 +12,8 @@ export const LoginForm: React.FC = () => {
       const { token } = await Api.auth.login(values);
 
       notification.success({
-        message: "Успешно!",
-        description: "Переходим в админ-панель...",
+        message: "Successfully!",
+        description: "Moving to the admin panel...",
         duration: 2,
       });
 
@@ -26,8 +26,8 @@ export const LoginForm: React.FC = () => {
       console.warn("LoginForm", err);
 
       notification.error({
-        message: "Ошибка!",
-        description: "Неверный логин или пароль",
+        message: "Error!",
+        description: "Incorrect login or password",
         duration: 2,
       });
     }
@@ -48,7 +48,7 @@ export const LoginForm: React.FC = () => {
           rules={[
             {
               required: true,
-              message: "Укажите почту",
+              message: "Please enter an email address",
             },
           ]}
         >
@@ -56,12 +56,12 @@ export const LoginForm: React.FC = () => {
         </Form.Item>
 
         <Form.Item
-          label="Пароль"
+          label="Password"
           name="password"
           rules={[
             {
               required: true,
-              message: "Укажите пароль",
+              message: "Please enter a password",
             },
           ]}
         >
@@ -75,7 +75,7 @@ export const LoginForm: React.FC = () => {
           }}
         >
           <Button type="primary" htmlType="submit">
-            Войти
+            Sign in
           </Button>
         </Form.Item>
       </Form>

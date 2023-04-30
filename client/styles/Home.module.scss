@@ -1,7 +1,11 @@
 .main {
-  width: 1200px;
+  max-width: 1200px;
   margin: 40px auto;
   text-align: center;
+
+  @media (max-width:1200px) {
+    margin: 20px 10px;
+  }
 }
 
 .sidebar {
@@ -21,7 +25,6 @@
 .layout {
   display: flex;
   flex-direction: row;
-  min-height: 600px;
   background: #fff;
   border-radius: 15px;
 }
@@ -30,9 +33,25 @@
   margin-top: 20px;
   padding-right: 10px;
   height: 100%;
+
+  @media (max-width: 999px) {
+    border-inline-end: none;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+    display: flex;
+  }
 }
 
 .dashboardContainer {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;
+  grid-template-columns: 0.1fr 1fr;
+  width: 100%;
+
+  @media (max-width:999px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width:470px) {
+    align-items: center;
+  }
 }

@@ -10,6 +10,7 @@
 - Создание своих декораторов в NestJS
 - Документация серверной части с помощью Swagger
 - База данных PostgreSQL + TypeORM
+- Адаптивный дизайн
 
 
 ### Технологии
@@ -24,8 +25,7 @@ Frontend:
 
 Backend:
 - NestJS
-- TypeScript
 - TypeORM + PostgreSQL
 - Swagger
 - Multer
-- PassportJS + JWTe
+- PassportJS + JWT

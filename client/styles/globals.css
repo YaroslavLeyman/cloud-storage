@@ -36,3 +36,9 @@ a {
 .empty-block {
   margin: 200px;
 }
+
+@media (max-width: 999px) {
+  .empty-block {
+    margin: 30px;
+  }
+}
