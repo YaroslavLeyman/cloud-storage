@@ -8,18 +8,18 @@ const AuthPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Dashboard / Auth</title>
+        <title>Log In</title>
       </Head>
       <main style={{ width: 400, margin: "50px auto" }}>
         <Tabs
           items={[
             {
-              label: "Войти",
+              label: "Sign In",
               key: "1",
               children: <LoginForm />,
             },
             {
-              label: "Регистрация",
+              label: "Sign Up",
               key: "2",
               children: <RegisterForm />,
             },

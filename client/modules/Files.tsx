@@ -47,7 +47,7 @@ export const Files: React.FC<FilesProps> = ({ items, withActions }) => {
           <FileList items={files} onFileSelect={onFileSelect} />
         </>
       ) : (
-        <Empty className="empty-block" description="Список файлов пуст" />
+        <Empty className="empty-block" description="The file list is empty" />
       )}
     </div>
   );

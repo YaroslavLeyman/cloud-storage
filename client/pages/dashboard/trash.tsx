@@ -21,7 +21,7 @@ const DashboardTrash: NextPage<Props> = ({ items }) => {
 };
 
 DashboardTrash.getLayout = (page: React.ReactNode) => {
-  return <Layout title="Dashboard / Корзина">{page}</Layout>;
+  return <Layout title="Trash">{page}</Layout>;
 };
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
