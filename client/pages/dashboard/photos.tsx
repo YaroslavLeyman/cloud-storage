@@ -12,7 +12,9 @@ interface Props {
   items: FileItem[];
 }
 
-const DashboardPhotos: NextPage<Props> = ({ items }) => {
+const DashboardPhotos: NextPage<Props> & {
+  getLayout?: (page: React.ReactNode) => React.ReactNode;
+} = ({ items }) => {
   return (
     <DashboardLayout>
       <Files items={items} withActions />

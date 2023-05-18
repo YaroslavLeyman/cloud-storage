@@ -12,7 +12,9 @@ interface Props {
   items: FileItem[];
 }
 
-const DashboardPage: NextPage<Props> = ({ items }) => {
+const DashboardPage: NextPage<Props> & {
+  getLayout?: (page: React.ReactNode) => React.ReactNode;
+} = ({ items }) => {
   return (
     <DashboardLayout>
       <Files items={items} withActions />
@@ -23,6 +25,7 @@ const DashboardPage: NextPage<Props> = ({ items }) => {
 DashboardPage.getLayout = (page: React.ReactNode) => {
   return <Layout title="Dashboard">{page}</Layout>;
 };
+
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const authProps = await checkAuth(ctx);
 
