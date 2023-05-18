@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as express from 'express';
 import { join } from 'path';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: false });
@@ -23,6 +23,18 @@ async function bootstrap() {
     },
   });
 
-  await app.listen(7777);
+  // if (process.env.NODE_ENV === 'production') {
+  //   await app.listen(process.env.PORT, process.env.APP_IP, () =>
+  //     console.log(
+  //       `App started on port http://${process.env.APP_IP}:${process.env.PORT}/...`,
+  //     ),
+  //   );
+  // } else {
+  //   await app.listen(process.env.PORT || 7777, () =>
+  //     console.log(`Server started on PORT = ${process.env.PORT || 7777}`),
+  //   );
+  // }
+
+  await app.listen(process.env.PORT || 7777);
 }
 bootstrap();

@@ -12,8 +12,8 @@ export const RegisterForm: React.FC = () => {
       const { token } = await Api.auth.register(values);
 
       notification.success({
-        message: "Успешно!",
-        description: "Вы успешно зарегистрировались",
+        message: "Successfully!",
+        description: "You have successfully registered",
         duration: 2,
       });
 
@@ -26,8 +26,8 @@ export const RegisterForm: React.FC = () => {
       console.warn(err);
 
       notification.error({
-        message: "Ошибка!",
-        description: "Ошибка при регистрации",
+        message: "Error!",
+        description: "Error during registration",
         duration: 2,
       });
     }
