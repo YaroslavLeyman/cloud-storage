@@ -30,7 +30,7 @@ export default function Home() {
             To visually evaluate the application, you need to register or use a
             test email and password
           </Paragraph>
-          <Paragraph>Email: test@test.ru</Paragraph>
+          <Paragraph>Email: test123@test.ru</Paragraph>
           <Paragraph>Password: 123456</Paragraph>
           <Space>
             <Text strong>Technologies used:</Text>

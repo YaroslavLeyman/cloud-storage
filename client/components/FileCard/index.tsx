@@ -4,6 +4,7 @@ import { getExtensionFromFileName } from "@/utils/getExtensionFromFileName";
 import { isImage } from "@/utils/isImage";
 import { getColorByExtension } from "@/utils/getColorByExtension";
 import { FileTextOutlined } from "@ant-design/icons";
+import { API_URL } from "@/utils/config";
 
 interface FileCardProps {
   filename: string;
@@ -16,7 +17,7 @@ export const FileCard: React.FC<FileCardProps> = ({
 }) => {
   const ext = getExtensionFromFileName(filename);
   const imageUrl =
-    ext && isImage(ext) ? "http://localhost:7777/uploads/" + filename : "";
+    ext && isImage(ext) ? `${API_URL}/uploads/` + filename : "";
 
   const color = getColorByExtension(ext);
   const classColor = styles[color];

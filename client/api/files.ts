@@ -3,6 +3,13 @@ import { FileItem } from "@/api/dto/files.dto";
 
 type FileType = "all" | "photos" | "trash";
 
+export interface UploadOptions {
+  file: File;
+  onSuccess: () => void;
+  onError: (error: { err: any }) => void;
+  onProgress: (progress: { percent: number }) => void;
+}
+
 export const getAll = async (type: FileType = "all"): Promise<FileItem[]> => {
   return (await axios.get("/files?type=" + type)).data;
 };
@@ -11,7 +18,7 @@ export const remove = (ids: number[]): Promise<void> => {
   return axios.delete("/files?ids=" + ids);
 };
 
-export const uploadFile = async (options: any) => {
+export const uploadFile = async (options: UploadOptions) => {
   const { onSuccess, onError, file, onProgress } = options;
 
   const formData = new FormData();
