@@ -1,22 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Button, Typography, Space, Tag, Select } from "antd";
+import { Button, Typography, Space, Tag } from "antd";
 import styles from "@/styles/Home.module.scss";
 
 const { Title, Paragraph, Text } = Typography;
-const { Option } = Select;
 
 export default function Home() {
   const router = useRouter();
-  const [language, setLanguage] = useState("en");
 
   const handleClick = () => {
     router.push("/dashboard/auth");
-  };
-
-  const handleLanguageChange = (value: string) => {
-    setLanguage(value);
   };
 
   return (
@@ -24,17 +18,9 @@ export default function Home() {
       <Head>
         <title>Cloud Storage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/cloud.svg" />
       </Head>
       <main className={styles.main}>
-        <Select
-          defaultValue="en"
-          style={{ width: 120 }}
-          onChange={handleLanguageChange}
-        >
-          <Option value="en">English</Option>
-          <Option value="ru">Русский</Option>
-        </Select>
         <Typography>
           <Title>Welcome to App</Title>
           <Paragraph>
