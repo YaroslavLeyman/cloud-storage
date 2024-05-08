@@ -1,6 +1,6 @@
 # Веб приложение - Облачное хранилище
 
-## [Посмотреть приложение](https://cloud.itleiman.ru)
+### [Посмотреть приложение](https://cloud.itleiman.ru)
 
 ### Описание
 
@@ -18,7 +18,7 @@
 ### Технологии
 
 Frontend:
-- NextJS 13
+- NextJS
 - TypeScript
 - SCSS
 - Ant Design
